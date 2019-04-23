@@ -1,0 +1,51 @@
+1. What data types do each of these values represent? 
+    1. String
+    2. Integer 
+    3. Date
+    4. Floating point
+    5. Floating point/money 
+
+2. Explain when a database would be used. Explain when a text file would be used. 
+    A database would be used when you need a way to store data that makes it easy to search for specific
+    data, that can handle multiple applications accessing the data, and when you want your data to persist 
+    beyond the end of a particular application process. A text file can be used when your data is only 
+    something that needs to be accessed temporarily, such as in a variable during a program, or if there 
+    is no need to regularly change the data. 
+
+3. Describe one difference between SQL and other programming languages. 
+    SQL is a declarative language, rather than a procedural language. 
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+    All of the pieces of a database fit together to help people store and retrieve specific information 
+    from a table. 
+
+5. Explain the meaning of table, row, column, and value.
+    Table: Where all of the data is stored 
+    Row: Represents all of the data related to one specific data entry 
+    Column: The columns are the categories that label what data the table contains 
+    Value: The specific data in one cell, some piece of into that the column name describes 
+
+6. List three data types that can be used in a table.
+    String, number, date 
+
+7. Given this payments table, provide an English description of the following queries and their results.
+    A. I'm looking for the date and amount from the payments table. 
+    B. I'm looking for the amount from the payments table that are greater than 500.
+    C. I am looking for all the data from the payments table whose payee is Mega Foods. 
+
+8. Given this users table, write SQL queries using the following criteria and include the output:
+    A. The email and sign-up date for the user named DeAndre Data 
+        SELECT email, signup 
+        FROM users 
+        WHERE name = 'DeAndre Data';
+        Output: 'datad@comcast.net', 2008-01-20
+    B. The user ID for the user with email 'aleesia.algorithm@uw.edu'
+        SELECT userid 
+        FROM users
+        WHERE email = 'aleesia.algorithm@uw.edu';
+        Output: 1
+    C. All the columns for the user ID equal to 4
+        SELECT *
+        FROM users 
+        WHERE userid = 4;
+        Output: 4, 'Brandy Boolean', 'bboolean@nasa.gov', 1999-10-15
