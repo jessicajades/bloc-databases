@@ -30,8 +30,11 @@
 
 7. Given this payments table, provide an English description of the following queries and their results.
     A. I'm looking for the date and amount from the payments table. 
+       Output: All rows for the date and amount columns on the payments table. 
     B. I'm looking for the amount from the payments table that are greater than 500.
+       Output: All values on the payments table that are greater than 500. 
     C. I am looking for all the data from the payments table whose payee is Mega Foods. 
+       Output: All values from the table that has Mega Foods in the payee column. 
 
 8. Given this users table, write SQL queries using the following criteria and include the output:
     A. The email and sign-up date for the user named DeAndre Data 
