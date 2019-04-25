@@ -39,14 +39,14 @@ of guests they are bringing, and the number of meals (1 for adults and 1/2 for c
         - First and last name: text 
         - Whether they sent their RSVP: boolean 
         - Number of guests: integer 
-        - Number of meals: integer 
+        - Number of meals: decimal
     
     Write a command that creates the table to track the wedding dinner. 
         CREATE TABLE dinner (
             name text, 
             rsvp boolean,
             guests integer,
-            meals integer
+            meals decimal
         );
     
     Write a command that adds a column to track whether the guest sent a thank you card.
@@ -87,7 +87,7 @@ ISBN, title, author, genre, publishing date, number of copies, and available cop
 
     Someone has just checked out one of the books. Change the number of available copies 
     to 1 fewer.
-        UPDATE library SET availableCopies=4 WHERE ISBN=9781632170668;
+        UPDATE library SET availableCopies=availableCopies-1 WHERE ISBN=9781632170668;
 
     Now one of the books has been added to the banned books list. Remove it from the table.
         DELETE FROM library WHERE ISBN=0132350882;
