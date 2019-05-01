@@ -149,8 +149,8 @@ and include the results:
     the books with the patrons.
         SELECT patrons.name, books.title 
         FROM transactions
-        JOIN patrons ON transactions.patron_id = patrons.id 
-        JOIN books ON books.isbn = transactions.isbn;
+        RIGHT OUTER JOIN patrons ON transactions.patron_id = patrons.id 
+        LEFT OUTER JOIN books ON books.isbn = transactions.isbn;
 
         | name             | title                                   |
         | ---------------- | --------------------------------------- |
