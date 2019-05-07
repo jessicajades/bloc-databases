@@ -150,14 +150,15 @@ and include the results:
         SELECT patrons.name, books.title 
         FROM transactions
         RIGHT OUTER JOIN patrons ON transactions.patron_id = patrons.id 
-        LEFT OUTER JOIN books ON books.isbn = transactions.isbn;
+        LEFT OUTER JOIN books ON books.isbn = transactions.isbn
+        AND transactions.checked_in_date IS null;
 
         | name             | title                                   |
         | ---------------- | --------------------------------------- |
-        | Hermione Granger | Hogwarts: A History                     |
-        | Cho Chang        | Advanced Potion-Making                  |
-        | Terry Boot       | Fantastic Beasts and Where to Find Them |
-        | Padma Patil      | Fantastic Beasts and Where to Find Them |
+        | Hermione Granger |                                         |
+        | Cho Chang        |                                         |
+        | Terry Boot       |                                         |
+        | Padma Patil      |                                         |
         | Terry Boot       | Advanced Potion-Making                  |
-        | Hermione Granger | Fantastic Beasts and Where to Find Them |
+        | Hermione Granger |                                         |
         | Cedric Diggory   | Fantastic Beasts and Where to Find Them |
